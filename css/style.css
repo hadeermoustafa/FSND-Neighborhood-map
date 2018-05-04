@@ -1,0 +1,51 @@
+ html,
+      body {
+        font-family: Arial, sans-serif;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        height: 100%;
+        position: relative;
+      }
+
+      input {
+        font-size: 12px;
+      }
+
+      h3 {
+        color: #525454;
+        font-size: 22px;
+        margin: 0 0 10px 0;
+        text-align: center;
+      }
+
+      
+#searchfilter{
+  width: 100%;
+  border-radius: 5px;
+  height: auto;
+}
+      #frame {  height: 440px;
+            padding: 20px; 
+          border: 2px solid #CCC; 
+          margin-bottom: 20px; 
+          background-color:#FFF }
+    #map { height: 400px; 
+     }
+    @media all and (max-width: 991px) {
+    #frame  { height: auto; }
+    #map{width: 100%;}
+    }
+#list{
+  list-style: none;
+}
+.list-items{
+  margin: 10px;
+  cursor: pointer;
+  cursor: hand;
+  font-size: 14px;
+  font-weight:600;
+}
