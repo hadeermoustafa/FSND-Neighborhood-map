@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Old Cairo</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+
+<body>
+
+    <section class="error-message">
+        <div class="alert-danger" role="alert" id="foursquare-loading-error"></div>
+    </section>
+
+    <div class="container">
+        <div class="row">
+            <div id="frame" class="col-md-12">
+                <div class="col-md-4">
+                    <h2>Old Cairo</h2>
+                    <hr>
+                    <form>
+                        <input placeholder=" Type to filter... " data-bind="textInput: filter, event: {keyup: locationsFilter}" id="searchfilter">
+                    </form>
+                    <hr>
+                    <ul data-bind="foreach: filteredLocations" id="list">
+                        <li data-bind="click: $parent.showInfo" class="list-items"> <span data-bind="text: title"> </span></li>
+                    </ul>
+                </div>
+
+                <div id="map" class="col-md-8"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src='js/knockout-3.4.2.js'></script>
+    <script src="js/script.js"></script>
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJ9Q1_z5Heg6oPRk3Y_x2ohsWV3AcvKRs&v=3&callback=initMap" onerror="mapFailed()">
+    </script>
+
+</body>
+
+</html>
